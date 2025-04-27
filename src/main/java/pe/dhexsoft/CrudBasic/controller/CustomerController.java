@@ -27,6 +27,11 @@ public class CustomerController {
         return  customerService.Listar();
     }
 
+    @GetMapping("/{id}")
+    public Customer listandoTodo(@PathVariable Long id){
+        return customerService.ListarXId(id);
+    }
+
     @DeleteMapping
     public void borrando(@PathVariable Long id){
         customerService.eliminar(id);

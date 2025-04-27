@@ -31,8 +31,13 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public Customer ListarXId(Long id) {
-        // ala espera
-        return null;
+        Customer customer = customerService.findById(id).orElseThrow(
+                () -> {
+                    //ojo el ResourceNotFoundException viene de manejo de excepciones
+                    throw new ResourceNotFoundException("Customer con id "+id+ "no se encuentra");
+                }
+        );
+        return customer;
     }
 
     @Override
