@@ -32,7 +32,7 @@ public class CustomerController {
         return customerService.ListarXId(id);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void borrando(@PathVariable Long id){
         customerService.eliminar(id);
     }

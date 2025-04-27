@@ -14,7 +14,7 @@ public class ErrorDetails {
     public ErrorDetails() {
     }
 
-    public ErrorDetails(String message, String path, String errorCode, LocalDateTime timeStamp) {
+    public ErrorDetails(LocalDateTime timeStamp, String message, String path, String errorCode) {
         this.message = message;
         this.path = path;
         this.errorCode = errorCode;
