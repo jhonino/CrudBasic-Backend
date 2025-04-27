@@ -19,11 +19,13 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public Customer guardar(Customer customer) {
+
         return customerService.save(customer);
     }
 
     @Override
     public List<Customer> Listar() {
+
         return customerService.findAll();
     }
 
@@ -35,11 +37,13 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public Customer modificar(Customer customer) {
-        return null;
+
+        return customerService.save(customer);
     }
 
     @Override
     public void eliminar(Long id) {
+
         customerService.deleteById(id);
     }
 }
