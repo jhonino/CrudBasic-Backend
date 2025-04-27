@@ -31,4 +31,13 @@ public class CustomerController {
     public void borrando(@PathVariable Long id){
         customerService.eliminar(id);
     }
+
+    @PutMapping
+    public Customer modificando(@RequestBody Customer customer){
+        Customer customerDb = customerService.ListarXId(customer.getId());
+        customerDb.setFirstName(customer.getFirstName());
+        customerDb.setLastName(customer.getLastName());
+        customerDb.setMail(customer.getMail());
+        return  customerService.modificar(customerDb);
+    }
 }
