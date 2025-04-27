@@ -2,6 +2,7 @@ package pe.dhexsoft.CrudBasic.service;
 
 import org.springframework.stereotype.Service;
 import pe.dhexsoft.CrudBasic.entity.Customer;
+import pe.dhexsoft.CrudBasic.exception.ResourceNotFoundException;
 import pe.dhexsoft.CrudBasic.repository.CustomerRepository;
 
 import java.util.List;
